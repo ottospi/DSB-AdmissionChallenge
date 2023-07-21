@@ -41,6 +41,11 @@ to connect to the database (I'm using the Dbeaver client so this are the folloew
 
 1. Are the goals for dollars raised significantly different between campaigns that are successful and unsuccessful?
 
+| Successful | Failed   | Undefined | All      |
+| --------   | -------  | -------- | -------  |
+| $9,743     | $97,520  | $146,401 | $72,361  |
+
+
 - 'successful' avg of the goal is 9,743
 - 'failed' avg of the goal is 97,520
 - 'undefined' avg of the goal is 146,401
