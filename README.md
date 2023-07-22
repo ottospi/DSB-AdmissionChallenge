@@ -190,20 +190,17 @@ order by backers
 ---
 3. What are the top/bottom 3 subcategories by backers?
 
-<div style="display:flex; justify-content:space-evenly">
-<div>
-- TOP 3 
+<table align="center" >
+<tr><th>TOP 3  </th><th>BOTTOM 3</th></tr>
+<tr><td>
 
-| Sub Category       | Backers |
+| Sub Category   | Backers |
 |----------------|---------|
 | Tabletop Games | 247,120 |
 | Product Design | 221,931 |
 | Video Games    | 141052 |
 
-</div>
-<div>
-
-- BOTTOM 3
+</td><td>
 
 | Sub Category   | Backers |
 |------------|---------|
@@ -211,8 +208,7 @@ order by backers
 | Photo      | 12      |
 | Latin      | 13      |
 
-</div>
-</div>
+</td></tr> </table>
 
 ```sql
 select 
@@ -229,10 +225,9 @@ order by backers
 ---
 4. What are the top/bottom 3 categories that have raised the most money? 
 
-
-<div style="display:flex; justify-content:space-evenly">
-<div>
-- TOP 3 
+<table align="center" >
+<tr><th>TOP 3  </th><th>BOTTOM 3</th></tr>
+<tr><td>
 
 | Category       | Backers |
 |------------|---------|
@@ -240,10 +235,7 @@ order by backers
 | Games      | $28,491,570 |
 | Design     | $25,395,194 |
 
-</div>
-<div>
-
-- BOTTOM 3
+</td><td>
 
 | Category   | Backers  |
 |------------|--------- |
@@ -251,8 +243,7 @@ order by backers
 | Dance      | $530,460 |
 | Crafts     | $620,131 |
 
-</div>
-</div>
+</td></tr> </table>
 
 ```sql
 select 
@@ -273,9 +264,9 @@ group by category_name
 5. What are the top/bottom 3 subcategories that have raised the most money?
 
 
-<div style="display:flex; justify-content:space-evenly">
-<div>
-- TOP 3 
+<table align="center" >
+<tr><th>TOP 3  </th><th>BOTTOM 3</th></tr>
+<tr><td>
 
 | Category       | Backers        |
 |------------    |----------------|
@@ -283,10 +274,7 @@ group by category_name
 |Tabletop Games	 | $9,293,162.87  |
 |Video Games	 | $7,913,822.82  |
 
-</div>
-<div>
-
-- BOTTOM 3
+</td><td>
 
 | Category | Backers  |
 |----------|--------- |
@@ -294,9 +282,7 @@ group by category_name
 | Crochet  | $173.00  |
 | Latin	   | $268.0   |
 
-
-</div>
-</div>
+</td></tr> </table>
 
 ```sql
 SELECT 
