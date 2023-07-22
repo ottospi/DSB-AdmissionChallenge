@@ -154,7 +154,7 @@ JOIN sub_category sub_c ON sub_c.id = campaign.sub_category_id
 ---
 2. What are the top/bottom 3 categories with the most backers? 
 
-<div display="flex" justify-content="space-evenly">
+<div align="center">
 <div>
 
 - TOP 3 
