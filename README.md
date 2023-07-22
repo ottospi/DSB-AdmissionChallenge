@@ -229,7 +229,7 @@ order by backers
 <tr><th>TOP 3  </th><th>BOTTOM 3</th></tr>
 <tr><td>
 
-| Category       | Backers |
+| Category       | Money |
 |------------|---------|
 | Technology | $28,760,280 |
 | Games      | $28,491,570 |
@@ -237,7 +237,7 @@ order by backers
 
 </td><td>
 
-| Category   | Backers  |
+| Category   | Money  |
 |------------|--------- |
 | Journalism | $455,930 |
 | Dance      | $530,460 |
@@ -268,7 +268,7 @@ group by category_name
 <tr><th>TOP 3  </th><th>BOTTOM 3</th></tr>
 <tr><td>
 
-| Category       | Backers        |
+| Sub Category       | Backers        |
 |------------    |----------------|
 |Product Design	 | $22,544,640.36 |
 |Tabletop Games	 | $9,293,162.87  |
@@ -276,7 +276,7 @@ group by category_name
 
 </td><td>
 
-| Category | Backers  |
+| Sub Category | Backers  |
 |----------|--------- |
 | Glass	   | $150.0   |
 | Crochet  | $173.00  |
