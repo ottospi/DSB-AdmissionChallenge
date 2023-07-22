@@ -154,8 +154,9 @@ JOIN sub_category sub_c ON sub_c.id = campaign.sub_category_id
 ---
 2. What are the top/bottom 3 categories with the most backers? 
 
-<div style="display:flex; justify-content:space-evenly">
+<div display="flex" justify-content="space-evenly">
 <div>
+
 - TOP 3 
 
 | Category   | Backers |
@@ -432,6 +433,10 @@ The executives have asked you to create 5 data visualizations that illustrate th
 
 Your visualizations must include titles and labels, and a summary of why each visualization might be important for your client and/or relevant to solving their business problem. You can use any visualization tool of your choice to create these 5 visualizations (Excel, Google Sheets etc.)
 
+5 visualizations
+    titles 
+    labels
+    summary
 
 ---
 ---
