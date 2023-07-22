@@ -85,7 +85,8 @@ To ensure the reliability of our analysis, we need to normalize the results in U
 | All        | 15,000 | $72,195  | $9,213  | $138,193,258 | 1,676,688 | $82.42     |
  
 <dl>
-  <dt>Successful campaigns</dt>
+    <dt>Overview:</dt>
+    <dt>- Successful campaigns</dt>
 
 - The average pledge per backer for successful campaigns is $81.34, while the average pledge per backer for failed campaigns is $84.23. This suggests that the amount of money that people are willing to pledge to Kickstarter campaigns is not significantly affected by whether the campaign is successful or failed.
 
@@ -97,7 +98,7 @@ To ensure the reliability of our analysis, we need to normalize the results in U
 </dl>
 
 <dl>
-  <dt>Undefined campaigns</dt>
+  <dt>- Undefined campaigns</dt>
 
 - The average pledge per backer is relatively consistent across all three categories. This suggests that the amount of money that people are willing to pledge to Kickstarter campaigns is not significantly affected by whether the campaign is successful, failed, or undefined.
 
@@ -153,6 +154,8 @@ JOIN sub_category sub_c ON sub_c.id = campaign.sub_category_id
 ---
 2. What are the top/bottom 3 categories with the most backers? 
 
+<div style="display:flex; justify-content:space-evenly">
+<div>
 - TOP 3 
 
 | Category   | Backers |
@@ -161,6 +164,10 @@ JOIN sub_category sub_c ON sub_c.id = campaign.sub_category_id
 | Technology | 329,751 |
 | Design     | 262,245 |
 
+</div>
+
+<div>
+
 - BOTTOM 3
 
 | Category   | Backers |
@@ -168,6 +175,9 @@ JOIN sub_category sub_c ON sub_c.id = campaign.sub_category_id
 | Dance      | 6,022   |
 | Journalism | 6,206   |
 | Crafts     | 10,418  |
+
+</div>
+</div>
 
 ```sql
 select 
@@ -188,7 +198,7 @@ order by backers
 <div>
 - TOP 3 
 
-| Category       | Backers |
+| Sub Category       | Backers |
 |----------------|---------|
 | Tabletop Games | 247,120 |
 | Product Design | 221,931 |
@@ -199,7 +209,7 @@ order by backers
 
 - BOTTOM 3
 
-| Category   | Backers |
+| Sub Category   | Backers |
 |------------|---------|
 | Glass      | 2       |
 | Photo      | 12      |
@@ -215,7 +225,7 @@ sum(campaign.backers) as backers
 FROM campaign campaign 
 join sub_category sub_c on sub_c.id = campaign.sub_category_id
 group by sub_c.name 
-order by backers desc
+order by backers 
 -- asc
 -- desc
 ```
@@ -223,62 +233,196 @@ order by backers desc
 ---
 4. What are the top/bottom 3 categories that have raised the most money? 
 
-<!-- 
+
 <div style="display:flex; justify-content:space-evenly">
 <div>
 - TOP 3 
 
 | Category       | Backers |
-|----------------|---------|
-| Tabletop Games | 247,120 |
-| Product Design | 221,931 |
-| Video Games    | 141052 |
+|------------|---------|
+| Technology | $28,760,280 |
+| Games      | $28,491,570 |
+| Design     | $25,395,194 |
 
 </div>
 <div>
 
 - BOTTOM 3
 
-| Category   | Backers |
-|------------|---------|
-| Glass      | 2       |
-| Photo      | 12      |
-| Latin      | 13      |
+| Category   | Backers  |
+|------------|--------- |
+| Journalism | $455,930 |
+| Dance      | $530,460 |
+| Crafts     | $620,131 |
 
 </div>
 </div>
 
 ```sql
 select 
-sub_c.name as sub_cat_name, 
-sum(campaign.backers) as backers 
+(select name from category c where category_id = c.id) as category_name,
+FORMAT(
+	SUM(
+		campaign.pledged
+         *
+        ( select ratio_to_dollar from currency c where campaign.currency_id = c.id ) 
+    ) 
+,0,'en_US') as SUM_Pledged_Dollar
 FROM campaign campaign 
 join sub_category sub_c on sub_c.id = campaign.sub_category_id
-group by sub_c.name 
-order by backers desc
--- asc
--- desc
-``` -->
+group by category_name 
+```
 
-
-- 
 ---
 5. What are the top/bottom 3 subcategories that have raised the most money?
 
-- 
+
+<div style="display:flex; justify-content:space-evenly">
+<div>
+- TOP 3 
+
+| Category       | Backers        |
+|------------    |----------------|
+|Product Design	 | $22,544,640.36 |
+|Tabletop Games	 | $9,293,162.87  |
+|Video Games	 | $7,913,822.82  |
+
+</div>
+<div>
+
+- BOTTOM 3
+
+| Category | Backers  |
+|----------|--------- |
+| Glass	   | $150.0   |
+| Crochet  | $173.00  |
+| Latin	   | $268.0   |
+
+
+</div>
+</div>
+
+```sql
+SELECT 
+sub_c.name as sub_cat_name, 
+SUM(
+    campaign.pledged 
+    * 
+    ( select ratio_to_dollar from currency c where campaign.currency_id = c.id ) 
+) as SUM_Pledged_Dollar
+FROM campaign campaign JOIN sub_category sub_c ON sub_c.id = campaign.sub_category_id
+GROUP BY sub_c.name 
+ORDER BY SUM_Pledged_Dollar DESC 
+```
+
 ---
 6. What was the amount the most successful board game company raised? 
 How many backers did they have?
 
-- 
+|ID | Name | SubCategory | Category | Contry | Currency| Goal | Pledged | Backers | Launched | Deadline | CampaingDuration |
+|----|----|----|----|----|----|----|----|----|----|----|----|
+| 7161 | Bring Reading Rainbow Back for Every Child, Everywhere! | Web | Technology | US | USD | 1,000,000.0 | **5,408,916.95** | **105,857** | 2014-05-28 | 2014-07-02 | 35 days|
+
+
+```sql
+SELECT 
+campaign.id ,
+campaign.name AS campaing_name, 
+sub_c.name AS sub_cat_name, 
+(SELECT name FROM category c WHERE category_id = c.id) AS category_name, 
+(SELECT name FROM country c WHERE campaign.country_id = c.id) AS country,
+(SELECT name FROM currency c WHERE campaign.currency_id = c.id) AS currency,
+(SELECT ratio_to_dollar FROM currency c WHERE campaign.currency_id = c.id) AS ratio,
+campaign.goal * (SELECT  ratio_to_dollar FROM currency c WHERE campaign.currency_id = c.id) AS Goal_Dollar,
+campaign.pledged * (SELECT  ratio_to_dollar FROM currency c WHERE campaign.currency_id = c.id) AS Pledged_Dollar, 
+campaign.goal, 
+campaign.pledged,
+campaign.backers, 
+campaign.outcome,
+campaign.launched, 
+campaign.deadline,
+DATEDIFF( campaign.deadline, campaign.launched ) AS CampaingDuration
+FROM campaign campaign  JOIN sub_category sub_c ON sub_c.id = campaign.sub_category_id
+order by Pledged_Dollar DESC LIMIT 1 
+```
+
 ---
 7. Rank the top three countries with the most successful campaigns in terms of dollars (total amount pledged), and in terms of the number of campaigns backed.
 
-- 
+- TOP 3 CONTRIES WITH MOST SUCESS
+
+<div style="display:flex; justify-content:center">
+
+| Country | SUM OF SUCCESSFUL CAMPAIGN | BACKERS |
+| :-----: | :----------: | :----------: |
+|   US    |   4365       |  1,295,509   |
+|   GB    |   487        |  90,729      |
+|   CA    |   137        |  28,466      |
+
+</div>
+
+```SQL 
+SELECT
+(SELECT NAME FROM country c WHERE campaign.country_id = c.id) AS country,
+COUNT(campaign.id ) AS id,
+SUM(campaign.backers) AS backers
+FROM campaign campaign  JOIN  sub_category sub_c ON sub_c.id = campaign.sub_category_id
+WHERE campaign.outcome = 'successful'
+GROUP BY country
+ORDER BY id DESC LIMIT 3
+```
+
+- TOP 3 CONTRIES WITH MOST BACKERS
+<div style="display:flex; justify-content:center">
+
+| Country | SUM OF SUCCESSFUL CAMPAIGN | BACKERS |
+| :-----: | :----------: | :----------: |
+|   US    |   4365       |  1,295,509   |
+|   GB    |   487        |  90,729      |
+|   AU    |   84         |  29,704      |
+
+</div>
+
+```SQL 
+SELECT
+(SELECT NAME FROM country c WHERE campaign.country_id = c.id) AS country,
+COUNT(campaign.id ) AS SUM_campaign,
+SUM(campaign.backers AS BACKERS
+FROM campaign campaign  JOIN  sub_category sub_c ON sub_c.id = campaign.sub_category_id
+WHERE campaign.outcome = 'successful'
+GROUP BY country
+order by BACKERS DESC LIMIT 3
+```
+
 ---
 8. Do longer, or shorter campaigns tend to raise more money? Why?
 
-- 
+- Determining that a short campaigns is 30 days, medium is 31 to 60 days and a long campaign is 61-100 we got this results:
+
+| SUM of units | success | failed | undefined | success % | failed % | undefined % | duration |
+|:------------:|:-------:|:------:|:--------:|:---------:|:--------:|:----------:|:--------:|
+|     9,433    |  3,413  |  4,971 |  1,049   |   36.1 %  |   52.7 % |   11.1 %   |  short   |
+|     5,331    |  1,811  |  2,761 |   759    |   33.9 %  |   51.8 % |   14.2 %   |  medium  |
+|     236      |    95   |    118 |   23     | **40.2 %**|**50.0 %**|  **9.7 %** | **long** |
+
+
+```SQL
+SELECT  
+COUNT( campaign.id ) AS UNITS,
+SUM(campaign.outcome = 'successful') AS SUCC,
+SUM(campaign.outcome = 'failed') AS FAILED,
+SUM(campaign.outcome IN ('canceled', 'suspended', 'undefined', 'live' ) ) AS UNDEFINED,
+(SUM(campaign.outcome = 'successful')*100)/COUNT( campaign.id ) AS SUCCESS_PORCERT,
+(SUM(campaign.outcome = 'failed')*100)/COUNT( campaign.id ) as FAILED_PORCERT,
+(SUM(campaign.outcome IN ('canceled', 'suspended', 'undefined', 'live' ))*100)/COUNT( campaign.id ) as UNDEFINED_PORCERT,
+CASE 
+	WHEN DATEDIFF( campaign.deadline, campaign.launched ) <= 30 THEN 'short'
+	WHEN DATEDIFF( campaign.deadline, campaign.launched ) <= 60 THEN 'medium'
+	ELSE 'long' 
+END AS duration
+FROM campaign campaign JOIN sub_category sub_c ON sub_c.id = campaign.sub_category_id
+GROUP BY duration
+```
 
 ---
 ---
