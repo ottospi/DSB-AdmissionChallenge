@@ -174,31 +174,6 @@ JOIN sub_category sub_c ON sub_c.id = campaign.sub_category_id
 
 </td></tr> </table>
 
-<div align="center" >
-<div>
-
-- TOP 3
-
-| Category   | Backers |
-|------------|---------|
-| Games      | 411,671 |
-| Technology | 329,751 |
-| Design     | 262,245 |
-
-</div>
-
-<div>
-
-- BOTTOM 3
-
-| Category   | Backers |
-|------------|---------|
-| Dance      | 6,022   |
-| Journalism | 6,206   |
-| Crafts     | 10,418  |
-
-</div>
-</div>
 
 ```sql
 select 
