@@ -333,7 +333,7 @@ order by Pledged_Dollar DESC LIMIT 1
 
 - TOP 3 CONTRIES WITH MOST SUCESS
 
-<div style="display:flex; justify-content:center">
+<div align="center" >
 
 | Country | SUM OF SUCCESSFUL CAMPAIGN | BACKERS |
 | :-----: | :----------: | :----------: |
@@ -355,7 +355,8 @@ ORDER BY id DESC LIMIT 3
 ```
 
 - TOP 3 CONTRIES WITH MOST BACKERS
-<div style="display:flex; justify-content:center">
+
+<div align="center">
 
 | Country | SUM OF SUCCESSFUL CAMPAIGN | BACKERS |
 | :-----: | :----------: | :----------: |
@@ -381,12 +382,15 @@ order by BACKERS DESC LIMIT 3
 
 - Determining that a short campaigns is 30 days, medium is 31 to 60 days and a long campaign is 61-100 we got this results:
 
+<div align="center">
+
 | SUM of units | success | failed | undefined | success % | failed % | undefined % | duration |
 |:------------:|:-------:|:------:|:--------:|:---------:|:--------:|:----------:|:--------:|
 |     9,433    |  3,413  |  4,971 |  1,049   |   36.1 %  |   52.7 % |   11.1 %   |  short   |
 |     5,331    |  1,811  |  2,761 |   759    |   33.9 %  |   51.8 % |   14.2 %   |  medium  |
 |     236      |    95   |    118 |   23     | **40.2 %**|**50.0 %**|  **9.7 %** | **long** |
 
+</div>
 
 ```SQL
 SELECT  
