@@ -424,15 +424,23 @@ Your visualizations must include titles and labels, and a summary of why each vi
     summary
 
 1.
-![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=123406733&format=image)
+![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=123406733&format=image )
 
 2.
+![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=1373526640&format=image)
 
 3.
+![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=1020757324&format=image)
 
 4.
+![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=1720896683&format=image)
 
 5.
+![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=227040019&format=image)
+![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=471199400&format=image)
+
+6.
+![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=1690578335&format=image)
 
 ---
 ---
