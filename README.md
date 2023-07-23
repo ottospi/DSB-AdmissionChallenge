@@ -424,7 +424,8 @@ Your visualizations must include titles and labels, and a summary of why each vi
     summary
 
 1.
-
+![alt text](http://url/to/img.png)
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=123406733&amp;format=image"></iframe>
 
 2.
 
