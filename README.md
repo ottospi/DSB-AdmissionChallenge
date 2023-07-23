@@ -423,6 +423,17 @@ Your visualizations must include titles and labels, and a summary of why each vi
     labels
     summary
 
+1.
+
+
+2.
+
+3.
+
+4.
+
+5.
+
 ---
 ---
 ## Part 3 - Findings & Recommendations :
