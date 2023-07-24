@@ -558,6 +558,8 @@ Your report must include:
 
 Note: The report should be written for a non-technical, executive audience, should address each of the report requirements below, and ultimately, should emphasize how and why your data-driven recommendations will contribute to the success of this next Kickstarter campaign.
 
+LINK : https://docs.google.com/document/d/1SgIL4Q0vrabuEf7K4yivV7kECTedyAmIp72d-coiR9s/edit?usp=sharing
+
 ---
 ---
 ## Submission Format :
