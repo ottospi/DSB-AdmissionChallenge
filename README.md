@@ -497,11 +497,46 @@ Your visualizations must include titles and labels, and a summary of why each vi
     ![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=1720896683&format=image)
 
 5.
-![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=227040019&format=image)
-![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=471199400&format=image)
+        Title: Crowdfunding Campaign Durations
+
+        Labels:
+
+        - Outcome: The outcome of the crowdfunding campaign.
+        - Average Campaing Duration: The average campaign duration for campaigns with that outcome.
+        Summary:
+
+        Those graphs shows the average campaign duration for different crowdfunding outcomes. The average campaign duration is highest for canceled campaigns, followed by failed campaigns. The average campaign duration is lowest for successful campaigns.
+
+        Notes:
+
+        The average campaign duration for all campaigns is 34 days.
+        The average campaign duration for games is 32 days.
+        This suggests that games have shorter campaign durations than all campaigns (~6% less time).
+
+    ![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=227040019&format=image)
+    ![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=471199400&format=image)
 
 6.
-![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=1690578335&format=image)
+        Title: Average Number of Backers for Game Crowdfunding Campaigns
+
+        Labels:
+
+        - Outcome: The outcome of the crowdfunding campaign.
+        - Average of Backers: The average number of backers for games campaigns in that outcome.
+        Summary:
+
+        This graph shows the average number of backers for game crowdfunding campaigns with different outcomes. The average number of backers is highest for successful campaigns, followed by live campaigns. The average number of backers is lowest for canceled campaigns.
+
+        Notes:
+
+        Comparing to all games and all campaigns:
+
+        - The average number of backers for all games campaigns is 99.30943931 backers.
+        - The average number of backers for all campaigns is 53.6266108 backers.
+        
+        This suggests that game campaigns have more backers than all campaigns.
+
+    ![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=1690578335&format=image)
 
 ---
 ---
