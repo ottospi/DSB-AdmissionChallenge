@@ -424,13 +424,51 @@ Your visualizations must include titles and labels, and a summary of why each vi
     summary
 
 1.
-![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=123406733&format=image )
+        Title: Crowdfunding Outcomes
+
+        Labels:
+
+        - Outcome: The outcome of the crowdfunding campaign.
+        - Average of Goal in Dollar: The average goal amount for campaigns with that outcome.
+        - Average de Pledged inDollar: The average pledged amount for campaigns with that outcome.
+
+        Summary: 
+        This table shows the average goal and pledged amounts for different crowdfunding outcomes.
+
+    ![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=123406733&format=image )
 
 2.
-![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=1373526640&format=image)
+        Title: Crowdfunding Outcomes for Games
+
+        Labels:
+
+        - Outcome: The outcome of the crowdfunding campaign.
+        - Average of Goal in Dollar: The average goal amount for campaigns with that outcome.
+        - Average de Pledged inDollar: The average pledged amount for campaigns with that outcome.
+
+        Summary: 
+        This table shows the average goal and pledged amounts for different crowdfunding outcomes for games.
+
+        Notes:
+        There are no games in the "suspended" outcome category. The average goal amount for games is lower than the average goal amount for all campaigns. The average pledged amount for games is a little higher than the average pledged amount for all campaigns.
+
+    ![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=1373526640&format=image)
 
 3.
-![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=1020757324&format=image)
+        Title: Crowdfunding Outcomes by Category
+
+        Labels:
+
+        Category name: The category of the crowdfunding project.
+        - Average of backers: The average number of backers for projects in that category.
+        - Average of Pledged in Dollar: The average amount pledged for projects in that category.
+        - Average of Goal in Dollar: The average goal amount for projects in that category.
+        
+        Summary:
+        This table shows the average number of backers, pledged amount, and goal amount for different crowdfunding categories. The average number of backers is highest for games, followed by comics and art. The average pledged amount is highest for games, followed by film & video and technology. The average goal amount is highest for games, followed by film & video and design.
+
+
+    ![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=1020757324&format=image)
 
 4.
 ![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8yZ1pxsbCJOcPAwSaqWoE37TRcjvEof_3DaL5RRkpGhm8PSSrGDuVc-oKgljVxiKY4Oqos2TNYmVK/pubchart?oid=1720896683&format=image)
