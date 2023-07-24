@@ -544,9 +544,11 @@ Your visualizations must include titles and labels, and a summary of why each vi
 
 Based on Parts 1 and 2, write a 2-4 page business recommendation report to the company’s executive board that answers the 3 key questions outlined in the business challenge:
 
-- What is a realistic Kickstarter campaign goal (in dollars) should the company aim to raise?
-- How many backers will be needed to meet their goal?
-- How many backers can the company realistically expect, based on trends in their category?
+1. What is a realistic Kickstarter campaign goal (in dollars) should the company aim to raise?
+2. How many backers will be needed to meet their goal?
+3. How many backers can the company realistically expect, based on trends in their category?
+
+
 Your report must include:
 
 - An introduction outlining the business problem at hand
